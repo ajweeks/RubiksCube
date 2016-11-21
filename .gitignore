@@ -1,3 +1,11 @@
+AdditionalLibraries/
+Debug/
+*.VC.db
+*.VC.opendb
+ipch/
+*.psd
+.vs/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

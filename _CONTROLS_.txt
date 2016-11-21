@@ -1,0 +1,5 @@
+
+Scroll		: Zoom in/out
+
+O			: Toggle wireframe
+P			: Toggle sphere helpers

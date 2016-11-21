@@ -1,0 +1,7 @@
+
+
+Troubles
+	- Figuring out how to represent both the animating rotations,
+	as well as the combined rotation
+	
+	- Figuring out how to remap all the pointers in the array of cubes

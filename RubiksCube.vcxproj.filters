@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Game Files\Shapes">
+      <UniqueIdentifier>{4fc82259-850b-4691-9e53-c9597871478e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D3DUtil.h">
+      <Filter>Engine Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Game Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadPosCol3D.h">
+      <Filter>Game Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CubePosCol3D.h">
+      <Filter>Game Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGame.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RubiksCube.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpherePosCol3D.h">
+      <Filter>Game Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad3D.h">
+      <Filter>Game Files\Shapes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Engine Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Game Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadPosCol3D.cpp">
+      <Filter>Game Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CubePosCol3D.cpp">
+      <Filter>Game Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGame.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RubiksCube.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpherePosCol3D.cpp">
+      <Filter>Game Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Quad3D.cpp">
+      <Filter>Game Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
