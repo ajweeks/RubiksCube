@@ -1,6 +1,8 @@
 
 #include "Shape.h"
 
+using namespace DirectX;
+
 ID3DX11Effect* Shape::s_pPosColEffect = nullptr;
 ID3DX11EffectTechnique* Shape::s_pPosColTechnique = nullptr;
 ID3DX11EffectTechnique* Shape::s_pPosUVTechnique = nullptr;
@@ -220,22 +222,6 @@ void Shape::Rotate(XMFLOAT3 offset, XMFLOAT3 deltaRot)
 	m_Rotation = m_Rotation * (matOffset * matRot * matOffsetInv);
 }
 
-//void Shape::SetRotation(XMFLOAT3 rot)
-//{
-//	m_Rotation = rot;
-//}
-
-//void Shape::RotateAbout(XMFLOAT3 axis, float angle)
-//{
-//	XMVECTOR axisVector = XMLoadFloat3(&axis);
-//	m_ToRotate = XMMatrixRotationAxis(axisVector, angle);
-//}
-
-//XMFLOAT3 Shape::GetRotation() const
-//{
-//	return m_Rotation;
-//}
-
 void Shape::SetViewMatrix(const XMFLOAT4X4& view4x4)
 {
 	m_View4x4 = view4x4;
@@ -249,8 +235,6 @@ void Shape::SetProjectionMatrix(const XMFLOAT4X4& projection4x4)
 void Shape::ClearToRotate()
 {
 	m_Rotation = XMMatrixIdentity();
-	//m_LayerRotation = { 0, 0, 0};
-	//m_ToRotate = XMMatrixIdentity();
 }
 
 

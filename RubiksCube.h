@@ -64,7 +64,7 @@ private:
 	static const float CUBE_WIDTH;
 	static const float SPACING;
 	
-	static XMFLOAT3 s_CubePositions[NUM_CUBES];
+	static DirectX::XMFLOAT3 s_CubePositions[NUM_CUBES];
 
 	CubePosCol3D *m_Cubes[NUM_CUBES];
 	CubePosCol3D *m_BackdropCube;

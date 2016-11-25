@@ -3,6 +3,8 @@
 
 #include <assert.h>
 
+using namespace DirectX;
+
 SpherePosCol3D::SpherePosCol3D(ID3D11Device* pD3DDevice, XMFLOAT3 position) :
 	Shape(12, 60, pD3DDevice, Shape::s_pPosColEffect, Shape::s_pPosColTechnique, Shape::s_pPosColMatWorldViewProjVariable),
 	m_Elapsed(0.0f)

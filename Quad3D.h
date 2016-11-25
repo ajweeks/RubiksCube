@@ -8,9 +8,9 @@ public:
 	Quad3D(ID3D11Device* pD3DDevice);
 	virtual ~Quad3D();
 
-	HRESULT Create(const wchar_t* texFilename, XMFLOAT3 p1, XMFLOAT3 p2, XMFLOAT3 p3, XMFLOAT3 p4, float uMin, float uMax, float vMin, float vMax);
-	HRESULT Create(const wchar_t* texFilename, XMFLOAT3 pos, float width, float height, XMFLOAT2 uMinMax = { 0, 1 }, XMFLOAT2 vMinMax = { 0, 1 });
-	HRESULT Create(const wchar_t* texFilename, float x, float y, float z, float width, float height, XMFLOAT2 uMinMax = { 0, 1 }, XMFLOAT2 vMinMax = { 0, 1 });
+	HRESULT Create(const wchar_t* texFilename, DirectX::XMFLOAT3 p1, DirectX::XMFLOAT3 p2, DirectX::XMFLOAT3 p3, DirectX::XMFLOAT3 p4, float uMin, float uMax, float vMin, float vMax);
+	HRESULT Create(const wchar_t* texFilename, DirectX::XMFLOAT3 pos, float width, float height, DirectX::XMFLOAT2 uMinMax = { 0, 1 }, DirectX::XMFLOAT2 vMinMax = { 0, 1 });
+	HRESULT Create(const wchar_t* texFilename, float x, float y, float z, float width, float height, DirectX::XMFLOAT2 uMinMax = { 0, 1 }, DirectX::XMFLOAT2 vMinMax = { 0, 1 });
 
 	void* operator new(size_t i);
 	void operator delete(void* p);

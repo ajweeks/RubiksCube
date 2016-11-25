@@ -8,6 +8,7 @@
 #include <sstream>
 #include <iostream>
 #include <vector>
+using namespace DirectX;
 
 XMFLOAT3 RubiksCube::s_CubePositions[27];
 

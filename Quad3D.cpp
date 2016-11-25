@@ -4,6 +4,8 @@
 
 #include <assert.h>
 
+using namespace DirectX;
+
 Quad3D::Quad3D(ID3D11Device* pD3DDevice)
 	: Shape(4, 6, pD3DDevice, Shape::s_pPosColEffect, Shape::s_pPosColTechnique, Shape::s_pPosColMatWorldViewProjVariable)
 {

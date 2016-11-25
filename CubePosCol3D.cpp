@@ -3,6 +3,8 @@
 
 #include <assert.h>
 
+using namespace DirectX;
+
 CubePosCol3D::CubePosCol3D(ID3D11Device* pD3DDevice, XMFLOAT3 position) :
 	Shape(36, 0, pD3DDevice, Shape::s_pPosColEffect, Shape::s_pPosColTechnique, Shape::s_pPosColMatWorldViewProjVariable),
 	m_Elapsed(0.0f)
@@ -107,17 +109,6 @@ HRESULT CubePosCol3D::Create(float x, float y, float z, float width, float heigh
 	{ verts[7], c5 }};	
 
 	assert(ArraySize(vertices) == m_NumVertices);
-
-	// For blended vertex colors (or solid shapes) use an index buffer like:
-	//DWORD indicies[] = {
-	//	0, 1, 2, 0, 2, 3, // Front
-	//	1, 5, 6, 1, 6, 2, // Right
-	//	5, 4, 7, 5, 7, 6, // Back
-	//	4, 0, 3, 4, 3, 7, // Left
-	//	4, 5, 1, 4, 1, 0, // Top
-	//	3, 2, 6, 3, 6, 7, // Bottom
-	//};	
-	//assert(ArraySize(indicies) == m_NumIndicies);
 
 	return Shape::CreateVertexBuffer("PosCol3DTech", vertices);
 }

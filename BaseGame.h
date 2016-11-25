@@ -5,7 +5,6 @@
 
 #include "D3DUtil.h"
 
-
 class BaseGame
 {
 public:
@@ -15,12 +14,13 @@ public:
 
 	static LRESULT CALLBACK WindowsProcedureStatic(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-	XMINT2 GetWindowSize() const;
+	DirectX::XMINT2 GetWindowSize() const;
 
 protected:
 	virtual void OnKeyDown(int vkCode) {};
 	virtual void OnKeyUp(int vkCode) {};
 	virtual void OnMouseWheel(int scrollAmount) {};
+	virtual void OnMouseDown(int button) {};
 
 	// Direct3D variables
 	ID3D11Device *m_Device;
@@ -33,7 +33,8 @@ protected:
 
 	int m_NumFrames;
 	bool m_VBLWait;
-	XMINT2 m_MousePos;
+	DirectX::XMINT2 m_MousePos;
+	int m_RenderTargetWidth, m_RenderTargetHeight;
 
 private:
 	// Functions
@@ -56,7 +57,6 @@ private:
 	// Window variables
 	HINSTANCE m_hInstance;
 	HWND m_WindowHandle;
-	int m_RenderTargetWidth, m_RenderTargetHeight;
 	std::wstring m_WindowClassName;
 	WNDCLASS m_WindowClass;
 	std::wstring m_WindowTitle;

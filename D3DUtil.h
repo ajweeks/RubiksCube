@@ -12,7 +12,6 @@
 #include <DirectXColors.h>
 #include <DirectXPackedVector.h>
 #include <DirectXCollision.h>
-using namespace DirectX;
 
 //util lib for loading effects
 #include "AdditionalLibraries/DX_Effects11/include/d3dx11effect.h"

@@ -9,14 +9,14 @@
 
 struct VertexPosUV
 {
-	XMFLOAT3 Position;
-	XMFLOAT2 TexCoord;
+	DirectX::XMFLOAT3 Position;
+	DirectX::XMFLOAT2 TexCoord;
 };
 
 struct VertexPosCol
 {
-	XMFLOAT3 Position;
-	XMFLOAT4 Color;
+	DirectX::XMFLOAT3 Position;
+	DirectX::XMFLOAT4 Color;
 };
 
 class Shape
@@ -31,16 +31,16 @@ public:
 	static void BuildAllEffects(ID3D11Device* D3DDevice);
 	static void ReleaseAllEffects();
 
-	void SetPos(XMFLOAT3 position);
-	void Move(XMFLOAT3 position);
-	XMFLOAT3 GetPosition() const;
+	void SetPos(DirectX::XMFLOAT3 position);
+	void Move(DirectX::XMFLOAT3 position);
+	DirectX::XMFLOAT3 GetPosition() const;
 
-	void SetScale(XMFLOAT3 scale);
+	void SetScale(DirectX::XMFLOAT3 scale);
 
-	void Rotate(XMFLOAT3 offset, XMFLOAT3 deltaRot);
+	void Rotate(DirectX::XMFLOAT3 offset, DirectX::XMFLOAT3 deltaRot);
 
-	void SetViewMatrix(const XMFLOAT4X4& view);
-	void SetProjectionMatrix(const XMFLOAT4X4& projection);
+	void SetViewMatrix(const DirectX::XMFLOAT4X4& view);
+	void SetProjectionMatrix(const DirectX::XMFLOAT4X4& projection);
 
 	void ClearToRotate();
 
@@ -52,10 +52,10 @@ protected:
 	HRESULT CreateVertexBuffer(const char* techniqueName, VertexPosUV vertices[]);
 	HRESULT CreateIndexBuffer(DWORD indicies[]);
 
-	XMFLOAT3 m_Position;
-	XMMATRIX m_Rotation;
-	XMFLOAT3 m_Scale;
-	XMFLOAT4X4 m_View4x4, m_Projection4x4;
+	DirectX::XMFLOAT3 m_Position;
+	DirectX::XMMATRIX m_Rotation;
+	DirectX::XMFLOAT3 m_Scale;
+	DirectX::XMFLOAT4X4 m_View4x4, m_Projection4x4;
 
 	ID3D11Device* m_pD3DDevice;
 	ID3D11Buffer* m_pIndexBuffer;
@@ -85,5 +85,5 @@ private:
 
 };
 
-XMFLOAT3 operator+(const XMFLOAT3& lhs, const XMFLOAT3&rhs);
-XMFLOAT3 operator-(const XMFLOAT3& lhs, const XMFLOAT3&rhs);
+DirectX::XMFLOAT3 operator+(const DirectX::XMFLOAT3& lhs, const DirectX::XMFLOAT3&rhs);
+DirectX::XMFLOAT3 operator-(const DirectX::XMFLOAT3& lhs, const DirectX::XMFLOAT3&rhs);

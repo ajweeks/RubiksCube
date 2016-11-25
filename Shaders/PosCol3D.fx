@@ -1,6 +1,6 @@
 
 Texture2D gDiffuseMap : DIFFUSEMAP;
-float  gAlphaRef : ALPHAREF = 0.5f;    // Global alpha ref for alpha testing
+float  gAlphaRef : ALPHAREF = 0.5f;  // Global alpha ref for alpha testing
 
 SamplerState samGeneral
 {

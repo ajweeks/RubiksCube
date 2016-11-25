@@ -6,6 +6,7 @@
 #include <vector>
 
 using namespace std;
+using namespace DirectX;
 
 BaseGame::BaseGame() :
 	m_hInstance(0),
@@ -359,6 +360,13 @@ LRESULT BaseGame::WindowsProcedure(HWND hWnd, UINT message, WPARAM wParam, LPARA
 	{
 		m_MousePos.x = GET_X_LPARAM(lParam);
 		m_MousePos.y = GET_Y_LPARAM(lParam);
+	} break;
+	case WM_LBUTTONDOWN:
+	case WM_RBUTTONDOWN:
+	case WM_MBUTTONDOWN:
+	{
+		int button = (message == WM_LBUTTONDOWN ? 0 : (message == WM_MBUTTONDOWN ? 1 : 0));
+		OnMouseDown(button);
 	} break;
 	case WM_MOUSEWHEEL:
 	{
