@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4BB7590D-3CD1-4AAC-AC8F-DB0534E11B4F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OverlordProject</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>_Temp\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Build\$(Configuration)\</OutDir>
+    <IntDir>_Temp\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../OverlordEngine/;../OverlordProject/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <Profile>
+      </Profile>
+      <IgnoreSpecificDefaultLibraries>libcpmtd.lib;libcmtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(OV_LIBS)\PhysX\bin\bin_debug\*" "$(OutDir)" /y /D
+xcopy "$(OV_LIBS)\Fmod\bin\*" "$(OutDir)" /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../OverlordEngine/;../OverlordProject/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <IgnoreSpecificDefaultLibraries>libcpmt.lib;libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(OV_LIBS)\PhysX\bin\bin_release\*" "$(OutDir)" /y /D
+xcopy "$(OV_LIBS)\Fmod\bin\*" "$(OutDir)" /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CourseObjects\GeometryShader\GeometryShaderTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 1\ComponentTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 1\TestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\Character.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\CharacterTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\ModelTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\SpikeyScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\SpriteTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\UberMaterialDefaultParams.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\UberMaterialTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\Cubelet.cpp" />
+    <ClCompile Include="CourseObjects\Week 4\PickTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\RubiksCube.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\RubiksCubeScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 4\SpriteFontTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 5\CubeMapTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 5\TerrainTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\MeshHelper.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_1.cpp" />
+    <ClCompile Include="CourseObjects\Week 7\HardwareSkinningScene.cpp" />
+    <ClCompile Include="Materials\ColorMaterial.cpp" />
+    <ClCompile Include="Materials\CubeMapMaterial.cpp" />
+    <ClCompile Include="Materials\DiffuseMaterial.cpp" />
+    <ClCompile Include="Materials\GrassMaterial.cpp" />
+    <ClCompile Include="Materials\SkinnedColorMaterial.cpp" />
+    <ClCompile Include="Materials\SkinnedDiffuseMaterial.cpp" />
+    <ClCompile Include="Materials\SpikeyMaterial.cpp" />
+    <ClCompile Include="Materials\UberMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_2.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_3.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OverlordEngine\OverlordEngine.vcxproj">
+      <Project>{634cfe8d-455c-45bf-94f0-bd0aab13e0e6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CourseObjects\GeometryShader\GeometryShaderTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 1\ComponentTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 1\TestScene.h" />
+    <ClInclude Include="CourseObjects\Week 2\Character.h" />
+    <ClInclude Include="CourseObjects\Week 2\CharacterTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 2\ModelTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 3\SpikeyScene.h" />
+    <ClInclude Include="CourseObjects\Week 3\SpriteTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 3\UberMaterialDefaultParams.h" />
+    <ClInclude Include="CourseObjects\Week 3\UberMaterialTestScene.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\Cubelet.h" />
+    <ClInclude Include="CourseObjects\Week 4\PickTestScene.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\RubiksCube.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\RubiksCubeScene.h" />
+    <ClInclude Include="CourseObjects\Week 4\SpriteFontTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 5\CubeMapTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 5\TerrainTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 6\MeshHelper.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_1.h" />
+    <ClInclude Include="CourseObjects\Week 7\HardwareSkinningScene.h" />
+    <ClInclude Include="Materials\CubeMapMaterial.h" />
+    <ClInclude Include="Materials\DiffuseMaterial.h" />
+    <ClInclude Include="Materials\ColorMaterial.h" />
+    <ClInclude Include="Materials\GrassMaterial.h" />
+    <ClInclude Include="Materials\SkinnedColorMaterial.h" />
+    <ClInclude Include="Materials\SkinnedDiffuseMaterial.h" />
+    <ClInclude Include="Materials\SpikeyMaterial.h" />
+    <ClInclude Include="Materials\UberMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_2.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_3.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="MainGame.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

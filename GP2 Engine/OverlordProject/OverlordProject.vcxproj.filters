@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="CourseObjects\Week 1\TestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 1\ComponentTestScene.cpp" />
+    <ClCompile Include="Materials\ColorMaterial.cpp" />
+    <ClCompile Include="Materials\DiffuseMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\SpikeyScene.cpp" />
+    <ClCompile Include="Materials\SpikeyMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\SpriteTestScene.cpp" />
+    <ClCompile Include="Materials\UberMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\UberMaterialTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 4\PickTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 3\UberMaterialDefaultParams.cpp" />
+    <ClCompile Include="CourseObjects\Week 4\SpriteFontTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 5\CubeMapTestScene.cpp" />
+    <ClCompile Include="Materials\CubeMapMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 5\TerrainTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\Cubelet.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\RubiksCube.cpp" />
+    <ClCompile Include="CourseObjects\Rubiks Cube\RubiksCubeScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\Character.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\CharacterTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 2\ModelTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_1.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_2.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\SoftwareSkinningScene_3.cpp" />
+    <ClCompile Include="CourseObjects\Week 6\MeshHelper.cpp" />
+    <ClCompile Include="CourseObjects\GeometryShader\GeometryShaderTestScene.cpp" />
+    <ClCompile Include="Materials\GrassMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Week 7\HardwareSkinningScene.cpp" />
+    <ClCompile Include="Materials\SkinnedDiffuseMaterial.cpp" />
+    <ClCompile Include="Materials\SkinnedColorMaterial.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="CourseObjects\Week 1\ComponentTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 1\TestScene.h" />
+    <ClInclude Include="Materials\ColorMaterial.h" />
+    <ClInclude Include="Materials\DiffuseMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 3\SpikeyScene.h" />
+    <ClInclude Include="Materials\SpikeyMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 3\SpriteTestScene.h" />
+    <ClInclude Include="Materials\UberMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 3\UberMaterialTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 4\PickTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 3\UberMaterialDefaultParams.h" />
+    <ClInclude Include="CourseObjects\Week 4\SpriteFontTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 5\CubeMapTestScene.h" />
+    <ClInclude Include="Materials\CubeMapMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 5\TerrainTestScene.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\Cubelet.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\RubiksCube.h" />
+    <ClInclude Include="CourseObjects\Rubiks Cube\RubiksCubeScene.h" />
+    <ClInclude Include="CourseObjects\Week 2\Character.h" />
+    <ClInclude Include="CourseObjects\Week 2\CharacterTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 2\ModelTestScene.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_1.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_2.h" />
+    <ClInclude Include="CourseObjects\Week 6\SoftwareSkinningScene_3.h" />
+    <ClInclude Include="CourseObjects\Week 6\MeshHelper.h" />
+    <ClInclude Include="CourseObjects\GeometryShader\GeometryShaderTestScene.h" />
+    <ClInclude Include="Materials\GrassMaterial.h" />
+    <ClInclude Include="CourseObjects\Week 7\HardwareSkinningScene.h" />
+    <ClInclude Include="Materials\SkinnedDiffuseMaterial.h" />
+    <ClInclude Include="Materials\SkinnedColorMaterial.h" />
+  </ItemGroup>
+</Project>
