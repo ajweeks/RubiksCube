@@ -11,6 +11,6 @@ Dropbox (32 MB): https://www.dropbox.com/s/bi7qzbnbh1vcozn/RubiksCube_Build_v0.1
 
 ![](http://i.imgur.com/NBhZScA.png)
 
-<p style="margin-left: auto; margin-right: auto; width: 380px">
-<img src="http://i.imgur.com/uHzoDOL.gif" />
-</p>
+<div style="text-align: center">
+<img src="http://i.imgur.com/c23Fdst.gif" />
+</div>
